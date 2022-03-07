@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    
+    {% if status == "already exists"%}    
+        <p>Title already exist</p>
+
+    {% elif status == "not found" %}
+        <p>Entry not found</p>
+    
+    {% endif %}
+{% endblock %}
