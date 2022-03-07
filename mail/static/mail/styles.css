@@ -1,0 +1,38 @@
+textarea {
+
+    min-height: 400px;
+}
+
+.email 
+{
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%; 
+    background-color: lightgreen;  
+}
+
+.email:hover     
+{
+    cursor: pointer;  
+}
+
+.read
+{
+    background-color: gray;   
+}
+
+.unread
+{
+    background-color: white;
+} 
+
+body 
+{
+    background-color: #f6f6f6 ;
+}
+
+#error
+{
+    color: #ff00ea
+}
+
