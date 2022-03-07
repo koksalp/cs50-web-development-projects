@@ -5,13 +5,11 @@ from django.shortcuts import render
 from django.urls import reverse
 from .models import Comment, User, Listings
 
-
 def index(request):
     listings = Listings.objects.all()
     return render(request, "auctions/index.html", {
         "listings": listings
     })
-
 
 def login_view(request):
     if request.method == "POST":
@@ -32,11 +30,9 @@ def login_view(request):
     else:
         return render(request, "auctions/login.html")
 
-
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
-
 
 def register(request):
     if request.method == "POST":
@@ -92,6 +88,5 @@ def item(request, item_id):
         pass
     if empty:
         return render(request , "auctions/items.html", {"item": item, "empty": empty})
-
 
     return render(request , "auctions/items.html", {"item": item, "comments": comments})
