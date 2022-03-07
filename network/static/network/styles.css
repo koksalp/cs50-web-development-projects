@@ -1,0 +1,62 @@
+.post
+{
+    border: 1px solid lightgray; 
+    padding: 10px; 
+    margin: 5px 10px 5px 10px; 
+    background-color: lightblue; 
+}  
+
+.post > p 
+{
+    margin: 0px; 
+}
+
+textarea[name="new_post"] 
+{
+    width: 100%; 
+}
+
+select 
+{
+    margin: 5px 10px 5px 10px; 
+}
+i 
+{
+    margin-right: 5px; 
+}
+
+i:hover
+{
+    cursor: pointer; 
+}
+
+a:hover 
+{
+    text-decoration: none; 
+}
+
+.edit 
+{
+    cursor: pointer; 
+    display: inline; 
+}
+
+.edit:hover
+{
+    color: white; 
+}
+
+h1, h4 
+{
+    margin: 5px 10px 5px 10px; 
+} 
+
+button[name="previous"], li.empty 
+{
+    margin-left: 10px; 
+}
+
+button#follow, button#unfollow 
+{
+    margin-left: 10px; 
+}

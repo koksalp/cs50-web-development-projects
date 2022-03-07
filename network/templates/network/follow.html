@@ -1,0 +1,47 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %} 
+    <h1>Following posts</h1>
+
+    {% for post in posts %}
+        <div class="post">  
+            <h3> <a href="{% url 'profile' post.person.id %}"><strong>{{ post.person.username }}</strong></a> </h3>  
+            <p> {{ post.content }} </p> 
+            <p> {{ post.date }} </p> 
+            {% if post.id in posts_liked and user.is_authenticated %} 
+                <p> <i class="fa fa-heart" style="font-size:1em;color:red"></i>{{ post.number_of_likes }} </p>  
+            {% else %} 
+                <p> <i class="fa fa-heart" style="font-size:1em;color:white "></i>{{ post.number_of_likes }} </p>  
+            {% endif %}
+            <p hidden > {{ post.id }} </p>    
+        </div>
+
+        {% empty %}
+        <li class="empty">No posts</li>  
+    {% endfor %} 
+
+    {% if posts|length %}
+        <form action="{% url 'follow' %}" method="post">     
+            {% csrf_token %}
+            {% if previous %}
+                <button type="submit" name="previous" value="previous">Previous</button> 
+            {% endif %} 
+            <select name="select" id="select" onchange="this.form.submit()"> 
+                {% for page in pages %}    
+                    {% if page == current_page %}
+                        <option name="page-number" value={{ page }} selected>{{ page }}</option> 
+                    {% else %}
+                        <option name="page-number" value={{ page }}>{{ page }}</option>
+                    {% endif %}
+                {% endfor %}  
+            </select>
+            {% if next %}
+                <button type="submit" name="next" value="next">Next</button> 
+            {% endif %} 
+        </form>  
+    {% endif %}
+
+    <script src="{% static 'network/like.js' %}"></script> 
+{% endblock %}  
+
+
