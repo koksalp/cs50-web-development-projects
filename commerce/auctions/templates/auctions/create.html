@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %}
+
+
+
+
+
+{% block body %}
+
+    <h2 id="h2">Create A New Listing</h2>
+
+    {% if message %}
+        <p id="p">{{ message }}</p>
+    {% endif %}
+
+    <form action="{% url 'create' %}" method="post" id="form">        
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" autocomplete="off" autofocus><br>
+        <input type="number" name="price" placeholder="Price" min="0" autocomplete="off"><br>
+        <input type="text" name="description" placeholder="Description" autocomplete="off"><br>
+        <input type="text" name="image" placeholder="Image URL" autocomplete="off"><br>
+        <input type="text" name="category" placeholder="Category" autocomplete="off"><br>
+
+        <button type="submit">Create</button>
+    </form>
+{% endblock %} 
