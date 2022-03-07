@@ -63,7 +63,7 @@ likes.forEach(element => {
                 element.style.color = like_color;  
             }).then(() => {
 
-                // decide whethher user liked or unliked post 
+                // decide whether, user liked or unliked post 
                 let like_or_unlike = element.style.color == "red"  ? true : false  ; 
      
                 // send a POST request to indicate whether user liked a post or not 
