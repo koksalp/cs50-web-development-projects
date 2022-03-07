@@ -5,10 +5,8 @@ from django.db import IntegrityError
 from django.http import JsonResponse
 from django.shortcuts import HttpResponse, HttpResponseRedirect, render
 from django.urls import reverse
-from django.views.decorators.csrf import csrf_exempt
-
+from django.views.decorators.csrf import csrf_exempt 
 from .models import User, Email
-
 
 def index(request):
 
@@ -19,7 +17,6 @@ def index(request):
     # Everyone else is prompted to sign in
     else:
         return HttpResponseRedirect(reverse("login"))
-
 
 @csrf_exempt
 @login_required
@@ -71,7 +68,6 @@ def compose(request):
 
     return JsonResponse({"message": "Email sent successfully."}, status=201)
 
-
 @login_required
 def mailbox(request, mailbox):
 
@@ -94,7 +90,6 @@ def mailbox(request, mailbox):
     # Return emails in reverse chronologial order
     emails = emails.order_by("-timestamp").all()
     return JsonResponse([email.serialize() for email in emails], safe=False)
-
 
 @csrf_exempt
 @login_required
@@ -126,7 +121,6 @@ def email(request, email_id):
             "error": "GET or PUT request required."
         }, status=400)
 
-
 def login_view(request):
     if request.method == "POST":
 
@@ -146,11 +140,9 @@ def login_view(request):
     else:
         return render(request, "mail/login.html")
 
-
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
-
 
 def register(request):
     if request.method == "POST":
