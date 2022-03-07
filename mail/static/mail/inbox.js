@@ -129,7 +129,6 @@ function load_mailbox(mailbox) {
                 // give button a class 
                 archive_button.className = "email-button";
 
-                
                 // append archive button to div so that each mail has the ability to archive or unarchive       
                 new_div.appendChild(archive_button);
 
@@ -174,7 +173,8 @@ function load_mailbox(mailbox) {
                         });
                     } 
                 }
-            }
+            } 
+            
             // set new_div's classname to email 
             new_div.className = "email"; 
 
@@ -202,6 +202,7 @@ function load_mailbox(mailbox) {
         }
     });
 }
+
 // function to load message    
 function load_message(sender, recipients, subject, timestamp, body, email_id)
 {
@@ -247,6 +248,7 @@ function load_message(sender, recipients, subject, timestamp, body, email_id)
             emailDiv.appendChild(p); 
         }
     } 
+    
     // sent emails cannot be replied   
     if (document.getElementById("from").value !== sender)
     {
@@ -259,6 +261,7 @@ function load_message(sender, recipients, subject, timestamp, body, email_id)
             compose_email(true, sender, subject, timestamp, body );             
         }
     }
+    
     // show email 
     showEmail.appendChild(emailDiv); 
 }  
