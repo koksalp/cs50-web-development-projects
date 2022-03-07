@@ -1,0 +1,46 @@
+body {
+    padding: 10px;
+}
+
+.listing
+{
+    padding-left: 5%;
+    text-align: center;
+    margin: 1%;
+    border: 1px solid lightgrey;
+    height: 250px;
+}
+.listing:hover
+{
+    box-shadow: 1px 1px lightgrey;
+}
+
+.listing > img
+{
+    float: left;  
+    margin-top: 20px;
+}
+.listing > div
+{
+    float: right;
+    margin-top: 30px;
+    margin-right: 300px;
+    text-align: justify;
+}
+.listing > div > p:nth-child(1)
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.listing > div > p:nth-child(4)
+{
+    font-size: 0.9rem;
+    color: rgba(106, 92, 92, 0.9);
+
+}
+.listing > div
+{
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
