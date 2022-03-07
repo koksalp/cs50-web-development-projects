@@ -1,5 +1,1 @@
-# cs50-web-development-projects
-This repo includes all the projects I have done for the course known as CS50’s Web Programming with Python and JavaScript by Harvard University. 
-I started taking this course in the summer of 2020, right after I have completed cs50x which is one of the most popular introduction to computer science courses around the world. The course consists of 5 projects and a final project. In order to complete the course successfully, all the projects need to get a valid score which is 1/1 after graded by the course staff. Each project focuses on a specific field of web development. Throughout the course, projects have been implemented using HTML, CSS and Javascript for the front end and for the back end of the applications python has been used for the main programming language with Django framework. So far, I have completed all the projects except the final project . I am currently working on the final project and I am plannig to finish it in a short period of time . 
-
-PS: None of the projects reqired to use of any framework for front end design so I did not really focus on that but since I know the basics of reactjs thanks to the course I can quickly learn it or any other javascript framework. 
+#5. Project: Network 
