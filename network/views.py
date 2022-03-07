@@ -84,7 +84,6 @@ def index(request):
         "next": True if len(pages) > 1 else False,     
         "current_page": 1 
     })
-
   
 def login_view(request):
     if request.method == "POST": 
@@ -105,11 +104,9 @@ def login_view(request):
     else:
         return render(request, "network/login.html")
 
-
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
-
 
 def register(request):
     if request.method == "POST":
@@ -163,7 +160,7 @@ def post(request, post_id):
         post.save()
         return HttpResponse(status=204)  
 
-    # POST request is sreceived   
+    # POST request is received   
     elif request.method == "POST": 
 
         # get content 
@@ -202,6 +199,7 @@ def following(request):
     # get all the posts of following people 
     posts = []
     followings = Follow.objects.filter(follower=request.user)
+    
     for i in followings: 
         posts.extend([post for post in Post.objects.filter(person=i.following)])
     posts=posts[::-1] 
