@@ -1,0 +1,74 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    float: right;
+    text-decoration: none;
+    color: rgb(27, 25, 25);
+    font-size: 1em;
+    margin: 10px;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+img
+{
+    margin: 10px 15px;
+}
+
+#advanced_search{
+    font-size: 1.3rem;
+    margin: 30px 0px 20px 40px;
+    color: rgb(230, 0, 0);
+}
+
+#container{
+    border-top: 1px solid rgb(228, 220, 220);
+    margin-left: -8px; 
+    margin-right: -8px;
+    padding: 20px 50px;
+}
+
+label{
+    display: inline-block;
+    margin-top: 5px;
+}
+
+input[type="text"]
+{
+    position:absolute;
+    left: 250px;
+    width: 500px;
+    padding: 5px;
+    border: 1px solid rgb(141, 131, 131);
+}
+
+div > div{
+    margin-bottom: 30px;
+}
+
+div > p
+{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]
+{
+    color: white;
+    background-color:#4d90fe;
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: none;
+    position: absolute;
+    left: 630px;
+}
+
+input[type="submit"]:hover
+{
+    background-color: #4c80ff;
+}

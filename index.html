@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="same.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+</head>
+<body>
+    <a href="advanced.html">Advanced Search</a>
+    <a href="image.html">Image Search</a>
+    <div>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google" width="272"> 
+        <form action="https://google.com/search">
+            <input type="text" name="q" autocomplete="off" autofocus>
+            <input type="submit" value="Google Search">
+            <input type="submit" value="I'm feeling lucky" name="btnI">
+        </form>
+    </div>     
+    <script>
+        var search = document.querySelector("input[type='submit']");
+        var q = document.querySelector("input");
+        var form = document.querySelector("form");        
+        search.addEventListener("click", function(){
+            if (q.value.trim() == "")
+            {
+                form.setAttribute("onclick", "return false;");
+            }
+            else if (form.hasAttribute("onclick"))
+            {
+                form.removeAttribute("onclick");
+            }
+        });
+    </script>
+</body>
+</html>
