@@ -1,0 +1,172 @@
+body {
+    padding: 10px;
+}
+
+.listing
+{
+    padding-left: 5%;
+    text-align: center;
+    margin: 1%;
+    border: 1px solid lightgrey;
+    height: 250px;
+}
+.listing:hover
+{
+    box-shadow: 1px 1px lightgrey;
+    background-color: #fafafa;
+}
+
+.listing > img
+{
+    float: left;  
+    margin-top: 20px;
+}
+.listing > div
+{
+    float: right;
+    margin-top: 30px;
+    margin-right: 300px;
+    text-align: justify;
+}
+.listing > div > p:nth-child(1)
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.time
+{
+    font-size: 0.9rem;
+    color: rgba(106, 92, 92, 0.9);
+
+}
+.listing > div 
+{
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.comment
+{
+    padding: 3px;
+    border: 1px solid black;
+    width: 500px;
+    word-wrap: break-word;
+}
+
+#h5:hover
+{
+    cursor: pointer;
+    color: lightskyblue;
+}
+
+#form 
+{
+    text-align: center;
+}
+
+#form > input
+{
+    margin: 5px 0px;
+    padding: 1px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#form > button
+{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 4px 6px 6px 6px;
+    background-color: #007BFF;
+}
+#form > button:hover
+{
+    background-color: #009BFF;
+}
+#p
+{
+    text-align: center;
+}
+
+.message
+{
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.4em;
+}
+.failure
+{
+    background-color: red;
+    color: white
+}
+
+.success
+{
+    background-color: green;
+    color: white
+}
+#w_form
+{
+    position: relative;
+    left: 70px;
+    bottom: 29px;
+}
+
+#h5
+{
+    display: inline;
+}
+
+#bid-form > input[type="number"]
+{
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+#close
+{
+    float: right;
+    padding: 3px 6px 6px 6px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.6em;
+}
+
+#close:hover
+{
+    background-color: red;
+}
+.price
+{
+    font-size: 1.6em;
+}
+
+.cap
+{
+    text-transform: capitalize;
+}
+
+#wl
+{
+    margin-bottom: 6px;
+}
+
+#winner
+{
+    font-size: 1.4em;
+    color: green;
+}
+
+#msg
+{
+    font-size: 1.6em;
+}

@@ -1,0 +1,29 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    <h2>Wachlist</h2>
+
+    {% for listing in listings %}
+        <div class="listing"> 
+            <img src={{ listing.item.image }} alt="no image" height="200">
+            <div>
+                <p>{{ listing.item.name }}</p>
+                <p><strong>Price:</strong> ${{ listing.item.price}}</p>
+                <p><strong>Category:</strong> {{ listing.item.category }}</p>
+                <p class="time"><strong>Created at: </strong> {{ listing.item.time }}</p>
+                <a href="{% url 'item' listing.item.id %}"><button>Details</button></a>
+                
+                <form action="{% url 'watchlist' user.id %}" method="post" id="w_form">
+                    {% csrf_token %}                
+                    <input type="hidden" value="{{ listing.item.id }}" name="item_id">                    
+                    <input type="submit" value="Remove from wachlist">
+                
+                </form>
+            </div>
+        </div>
+        
+    {% empty %}
+        <ul><li><h3>Your watchlist is empty.</h3></li></ul>
+    {% endfor %}
+{% endblock %} 
